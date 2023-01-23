@@ -22,11 +22,20 @@ jobs:
           git --version
           echo Is build tools installed...?
           npm --version
+       - name: Build & push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v5
+        with:
+          image: hrc1663/react-js-image
+          tags: latest
+          registry: docker.io
+          dockerfile: Dockerfile
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
       
-      - name: Building jar file 
-        run: | 
-          npm install 
-          echo "Build success......."
-          npm run build
-          pwd
-          ls 
+      # - name: Building jar file 
+      #   run: | 
+      #     npm install 
+      #     echo "Build success......."
+      #     npm run build
+      #     pwd
+      #     ls 
