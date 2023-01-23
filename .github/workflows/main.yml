@@ -22,7 +22,7 @@ jobs:
           git --version
           echo Is build tools installed...?
           npm --version
-       - name: Build & push Docker image
+      - name: Build & push Docker image
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
           image: hrc1663/react-js-image
