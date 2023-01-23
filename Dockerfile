@@ -6,9 +6,9 @@ COPY . .
 # RUN npm test - if you want to test before to build
 RUN npm run build
 
-FROM nginx:alpine AS pro
+FROM nginx:alpine 
 WORKDIR /usr/share/nginx/html
-COPY --from=pro /app/build .
+COPY --from=prod /app/build .
 EXPOSE 80
 # run nginx with global directives and daemon off
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
