@@ -1,0 +1,25 @@
+name: ReactJs 
+
+on: 
+  push: 
+    branches: ["main"]
+    
+jobs: 
+  build: 
+    runs-on: ubuntu-latest 
+    
+    steps: 
+  
+      - uses: actions/checkout@v3 
+      
+      - name: checking container 
+        run: |
+          echo I am in container 
+          ls -a 
+          echo checking java version .....
+          java --version
+          echo Is git installed.......?
+          git --version
+          echo Is build tools installed...?
+          npm --version
+    
