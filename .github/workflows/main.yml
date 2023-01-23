@@ -28,4 +28,5 @@ jobs:
           npm install 
           echo "Build success......."
           npm run build
-    
+          pwd
+          ls 
