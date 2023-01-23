@@ -22,4 +22,9 @@ jobs:
           git --version
           echo Is build tools installed...?
           npm --version
+      
+      - name: Building jar file 
+        run: | 
+          npm run build 
+          echo "Build success......."
     
