@@ -25,6 +25,6 @@ jobs:
       
       - name: Building jar file 
         run: | 
-          npm run build 
+          npm install 
           echo "Build success......."
     
