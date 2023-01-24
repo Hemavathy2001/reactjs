@@ -8,6 +8,6 @@ RUN npm run build
 FROM nginx:alpine 
 WORKDIR /usr/share/nginx/html
 COPY --from=prod /app/build .
-EXPOSE 80
+EXPOSE 3000
 # run nginx with global directives and daemon off
 ENTRYPOINT ["nginx","-g","deamon off;"]
