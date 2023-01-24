@@ -10,4 +10,4 @@ WORKDIR /usr/share/nginx/html
 COPY --from=prod /app/build .
 EXPOSE 80
 # run nginx with global directives and daemon off
-ENTRYPOINT ["nginx"]
+ENTRYPOINT ["nginx","-g","deamon off;"]
